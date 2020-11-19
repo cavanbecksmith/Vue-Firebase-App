@@ -1,0 +1,40 @@
+.filter-col{
+	&:nth-child(1){
+		// border-right: 1px solid #FFF;
+	}
+	text-align:center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.filter-heading{
+	font-size: 30px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #FFF;
+	padding-bottom: 10px;
+}
+
+@media(max-width: 768px){
+	.filter-col{
+		border: none !important;
+	}
+}
+
+//Custom Controls
+.custom-control {
+	display:inline-block !important;
+	padding:0 !important;
+}
+.custom-control-description {
+	display:block !important;
+	background-color:#eee;
+	color:#222;
+	margin:5px 5px;
+	padding:12px 20px 10px 20px;
+	cursor:pointer;
+}
+.custom-control-input:checked + .custom-control-description {
+	background-color:#0291cb;
+	color:#fff;
+}

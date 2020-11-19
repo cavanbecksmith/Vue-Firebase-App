@@ -1,0 +1,64 @@
+{
+  "name": "corcavianvuefire",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "url-loader": "^4.1.1",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "bootstrap": "^4.5.3",
+    "css-loader": "^5.0.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "exports-loader": "^1.1.1",
+    "firebase": "^8.0.1",
+    "imports-loader": "^1.2.0",
+    "jquery": "^3.5.1",
+    "jquery-validation": "^1.19.2",
+    "postcss": "^8.1.6",
+    "postcss-loader": "^4.0.4",
+    "prismjs": "^1.22.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.5",
+    "simple-vue-validator": "^0.16.0",
+    "sweetalert": "^2.1.2",
+    "tinymce": "^5.5.1",
+    "tinymce-vue-2": "0.0.5",
+    "vue-clickaway": "^2.2.2",
+    "vue-focus": "^2.1.0",
+    "vue-router": "^3.4.9",
+    "vue-template-compiler": "^2.6.11",
+    "vue2-filters": "^0.11.0",
+    "vuefire": "^2.2.4"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

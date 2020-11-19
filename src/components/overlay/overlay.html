@@ -1,0 +1,40 @@
+	<div id="createIssue" class="issuebox">
+		<div class="overlay"></div>
+		<div class="wrap">
+
+			<!-- Heading -->
+			<h1>Create new issue</h1>
+
+			<!-- Select category box -->
+			<select v-model="cat" class="selectCat">
+			  <option disabled value="">Category (Please select one)</option>
+			  <option value="frontend">Front End Development</option>
+			  <option value="backend">Back End Development</option>
+			  <option value="seo and marketing">SEO & Marketing</option>
+			  <option value="design">Design</option>
+			  <option value="email">Email</option>
+			  <option value="general">General Information (or misc)</option>
+			</select>
+			<span>Selected: {{ cat }}</span>
+
+			<!-- Post content here -->
+			<div class="spacer"></div>
+
+			<!-- Title -->
+			<div class="heading">Title</div>
+			<div class="ed_title ed form-control" id="EdHead" contenteditable="true"></div>
+
+			<!-- Keywords -->
+			<div class="heading">Keywords</div>
+			<input class="keywords form-control" id="NewKeywords" contenteditable="true"/>
+
+			<!-- HTML EDITOR -->
+			<div class="heading">Content</div>
+			<textarea id="newissuearea"></textarea>
+
+			<!-- Submit issue -->
+			<div class="btn btn-primary cta" id="PostIssue" v-on:click="submit">Submit</div>
+			<button type="button" class="close" aria-label="Close" @click="closeWindow()"><span aria-hidden="true">&times;</span></button>
+      
+		</div>
+	</div>

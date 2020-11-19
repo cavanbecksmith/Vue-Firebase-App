@@ -1,0 +1,116 @@
+// ------- Issue Wrapper -------- //
+
+.issue_wrapper{
+	margin: 0 auto !important;
+	font-size: 1em;
+	color: #424242;
+	// padding: 20px;
+	margin: 20px;
+	color: #FFF;
+	.posts{
+		max-width: 1200px;
+		margin: 0 auto;
+	    margin-top: 20px;
+		.post{
+			background: #636363;
+			margin-bottom: 20px;
+			.title{
+				font-size: 3em;
+				margin-bottom: 30px;
+			}
+			.HTML{
+				line-height: 1.5em;
+				color: #444;
+				h1{font-size: 4em; line-height: 1em; margin-bottom: 0.5em;}
+				h2{font-size: 3em; line-height: 1em; margin-bottom: 0.5em;}
+				h3{font-size: 2em; line-height: 1em; margin-bottom: 0.5em;}
+				p{font-size: 16px; line-height: 1.5em; letter-spacing: 0.08em; margin-bottom: 16px; margin-top: 16px;}
+			}
+		}
+	}
+}
+
+// ------- Keywords -------- //
+
+#Search{
+	max-width: 600px;
+	margin: auto;
+}
+
+.keywords{
+	width: 100%;
+	margin: 20px 20px 20px 0px;
+}
+
+.key{
+    width: auto;
+    background: black;
+    padding: 10px;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+// ------- Post title -------- //
+
+.post_title{
+	padding: 20px;
+	background: black;
+	margin-top: 10px;
+	h1{
+		font-family: $header-font;
+		font-size:4em;
+		// margin-bottom:0.25em;
+		text-align:center;
+		// margin: auto;
+		
+		box-sizing: border-box;
+
+		// max-width:$nav-width;
+	}
+}
+
+// ------- Extras -------- //
+
+h1, h2 {
+  font-weight: normal;
+}
+
+.HTML ul {
+  list-style-type: disc !important;
+  padding: 0;
+  li{
+	display: list-item;
+	margin-left: 20px;
+	ul{
+		list-style-type: circle;
+	}
+  }
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #e62b4c;
+}
+
+.post{
+  padding: 20px;
+}
+
+// ------- Collapsed menu -------- //
+
+.collapsed{
+	display: none;
+}
+
+pre{
+	position: relative;
+	max-height: $code-height;
+}
+
+.icon{
+	display: none !important;
+}

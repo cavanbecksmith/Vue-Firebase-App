@@ -1,0 +1,17 @@
+@import "~media-queries";
+// media-queries
+// sass-mediaqueries/_media-queries.scss
+// https://paranoida.github.io/sass-mediaqueries/
+
+
+@include mq($max-width: 1000px) {
+
+	#navigation{
+		// background: blue !important;
+		.navbar{
+			// background: blue !important;
+		}
+	}
+
+
+}

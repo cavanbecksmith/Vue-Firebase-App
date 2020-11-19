@@ -1,0 +1,63 @@
+<div class="form" id="loginFrm">
+	
+
+	<ul class="tab-group">
+		<router-link @click="checkPath()" tag="li" to="login" class="tab"><a>Log In</a></router-link>
+		<router-link @click="checkPath()" tag="li" to="signup" class="tab"><a>Sign up</a></router-link>
+	</ul>
+	
+	<div class="tab-content">
+	<!-- Signup -->
+		<div id="signup" v-if="signup">
+			<h1 class="frm-title">Sign Up</h1>
+			<form>
+
+				<div class="field-wrap">
+					<label>
+						Email Address<span class="req">*</span>
+					</label>
+					<input class="login-frm" name="email" v-model="email" type="email"required autocomplete="off"/>
+				</div>
+				
+				<div class="field-wrap">
+					<label>
+						Set A Password<span class="req">*</span>
+					</label>
+					<input class="login-frm" v-model="password" type="password"required autocomplete="off"/>
+				</div>
+				
+				<button class="button button-block" @click="submit('signup')" type="button">Sign up</button>
+				
+			</form>
+		</div>
+		<!-- Login -->
+		<div id="login" v-if="login">
+
+			<h1 class="frm-title">Welcome Back!</h1>
+			
+			<form>
+				
+				<div class="field-wrap">
+					<label>
+						Email Address<span class="req">*</span>
+					</label>
+					<input class="login-frm" type="email"required autocomplete="off" v-model="email"/>
+				</div>
+				
+				<div class="field-wrap">
+					<label>
+						Password<span class="req">*</span>
+					</label>
+					<input class="login-frm" type="password"required autocomplete="off" v-model="password"/>
+				</div>
+				
+				<p class="forgot"><a href="#">Forgot Password?</a></p>
+				
+				<button class="button button-block" @click="submit('login')" type="button">Log In</button>
+				
+			</form>
+		</div>
+		
+	</div>
+		
+</div>

@@ -1,0 +1,23 @@
+.filter_section{
+	h2{}
+	label{}
+	input{}
+	.checkbox{}
+	svg{}
+	.cbxtxt{}
+}
+
+.filter-block{
+	display: inline-block;
+	width: 25%;
+	box-sizing: border-box;
+}
+
+.filter_section{
+	display: inline-block;
+	width: 25%;
+}
+
+pre{
+	max-height: 300px !important;
+}

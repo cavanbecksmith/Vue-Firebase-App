@@ -1,0 +1,30 @@
+<div id="app" :style="">
+  <div id="navigation">
+  <!--  -->
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+    <a class="navbar-brand">
+      <img src="http://corcavian.site/wp-content/themes/Corcavian/img/corcavian_white.png" alt="Corcavian"/>
+    </a>
+
+    <div class="navbar navbar-default" id="navbarColor01">
+      <ul class="nav navbar-nav">
+        <li class="new_issue nav-link" v-on:click="showNewIssue()"><a>New issue</a></li>
+        <!-- <li class="Web nav-link"><router-link v-bind:to="'/'">Posts</router-link></li> -->
+        <!-- <li class="Web nav-link"><a onclick="signOut(true)">Sign out</a></li> -->
+      </ul>
+      <!-- <form class="form-inline">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+    <!--  -->
+    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+  </div>
+  <router-view></router-view>
+  <Overlay></Overlay>
+  <Edit v-show.sync="ed_visible" :title.sync="title" :html.sync="returnhtml" :keywords.sync="keywords" :category.sync="category"></Edit>
+</div>

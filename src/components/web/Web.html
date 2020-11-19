@@ -1,0 +1,53 @@
+<div class="issue_wrapper">
+  <div class="post_title">
+    <h1>Knowledge Base</h1>
+  </div>
+  <filters></filters>
+  <div id="fixedPostHeader" v-if="signedin">
+
+    <!-- Title -->
+
+    <!-- TO BE IMPLEMENTED -->
+    <div id="searcharea" class="bk-red">
+
+      <!-- Search box -->
+      <Search v-model="search"></Search>
+
+    </div>
+  </div>
+
+  <div class="posts">
+
+
+  <!-- Transition -->
+  <transition-group name="list-complete" tag="div">
+
+      <!-- V For all posts in teamsite section -->
+      <div v-bind:key="item" class="post list-complete-item" v-for="(item, index) in flip" v-model="editedTxt[index]" v-if="signedin && isChecked(item) && searchRes(item)">
+        <!-- Close button -->
+        <div class="close" v-on:click="deletePost(item)">X</div>
+
+        <!-- Category -->
+        <div class="category" style="display:none">{{item.category}}</div>
+
+        <!-- Title HTML -->
+        <div class="title">{{item.title}}</div>
+
+        <!-- Key words - NOT IMPLEMENTED -->
+        <div class="keywords" >
+          <div class="key" v-for="keys in item.keywords">{{keys}}</div>
+        </div>
+
+        <!-- HTML content -->
+        <div class="HTML" v-html="item.content"></div>
+
+        <!-- Edit -->
+        <div class="btn btn-danger edit" @click="editPost(item, $event)">Edit</div>
+      </div>
+
+
+    </transition-group>
+
+
+  </div>
+</div>

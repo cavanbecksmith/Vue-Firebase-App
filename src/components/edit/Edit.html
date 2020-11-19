@@ -1,0 +1,38 @@
+<div id="editIssue" class="issuebox">
+
+	<!-- Black Overlay -->
+	<div class="overlay"></div>
+
+	<!-- Wrap -->
+	<div class="wrap">
+
+		<!-- Heading -->
+		<h1>Edit issue</h1>
+
+		<!-- Edit content here -->
+		<div class="spacer"></div>
+
+		<!-- Heading/title -->
+		<div class="heading">Title</div>
+
+		<!-- Title -->
+		<div class="ed_title ed editTitle form-control" contenteditable="true" v-model="title"></div>
+
+		<!-- Dont remember why i put this here???? :S -->
+		<div class="hidden_cat" style="display:none;"></div>
+
+		<!-- Keywords -->
+		<div class="heading">Keywords</div>
+		<input class="form-control keywords_edit" v-model="proccessKeyWords"/>
+
+		<div class="heading">Content</div>
+
+		<!-- HTML EDITOR -->
+		<textarea id="test" style="min-height:300px"></textarea>
+
+		<!-- Submit issue -->
+		<div class="btn btn-primary cta" id="PostIssue" v-on:click="submit">Submit</div>
+		<button type="button" class="close" aria-label="Close" @click="closeWindow()"><span aria-hidden="true">&times;</span></button>
+
+	</div>
+</div>

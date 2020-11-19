@@ -1,0 +1,148 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300');
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import "bootstrap/scss/bootstrap.scss";
+@import "searcharea";
+@import "posts";
+@import "overlay";
+@import "nav";
+@import "icons";
+
+// TR Updates
+h2, h3, h4, h5, h6, p, li {
+  color:#333 !important;
+}
+#app {
+  background-color:#e9e9e9;
+}
+.post.list-complete-item:first-child {
+  margin-top:30px;
+}
+.post.list-complete-item {
+  background-color:#fff !important;
+  // color:#000 !important;
+  border:1px solid #e1e1e1;
+}
+.key {
+  background-color:#0065A1 !important;
+}
+.title {
+  color:#333;
+}
+#Filters {
+  // position:absolute;
+  background-color:#bbbbbb;
+  padding:5px;
+  margin:0;
+  top:129px;
+  left:0;
+  // max-width:159px;
+  width: 100%;
+}
+
+@media screen and (max-width:1211px) {
+  #Filters {
+    left:50%;
+    // transform:translateX(-50%);?
+    width:100%;
+    top:75px;
+  }
+  .post.list-complete-item:first-child {
+    // margin-top:150px;
+  }
+}
+
+//Original SCSS
+
+
+p a{
+  word-wrap: break-word;
+  color:#ef7e92;
+  text-decoration:none;
+}
+p a:hover {
+  color:#ef7e92;
+  text-decoration:underline;
+}
+li a{
+  word-wrap: break-word;
+  color:#ef7e92;
+  text-decoration:none;
+}
+li a:hover {
+  color:#ef7e92;
+  text-decoration:underline;
+}
+
+.hidden{
+	display: none !important;
+}
+.input-group-btn {
+	display:none !important;
+}
+.issue_wrapper .posts .post .title {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+//Fixed Post Header
+.post_title {
+  background-color:#000;
+  color:#fff !important;
+  position:relative;
+  width:100%;
+}
+#fixedPostHeader {
+  z-index: 10;
+  position:relative;
+}
+#fixedPostHeader.fixed {
+  position:fixed;
+  width:100%;
+  z-index:100;
+  top:70px;
+}
+.filter-heading {
+  font-size: 25px !important;
+  font-family:'Montserrat', sans-serif;
+}
+
+//Navigation
+#navigation {
+  background: #000;
+  width: 100%;
+  height: 55px;
+  z-index: 150;
+  position: fixed;
+  margin-top:-40px;
+  padding:0;
+}
+//Overlay
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    height: 38px;
+}
+.mce-label {
+  display:none !important;
+}
+.issue_wrapper {
+  margin:40px auto !important;
+  padding-top:17px;
+}
+ul.tab-group {
+  margin-top:50px !important;
+}
+
+div.post_title {
+	background-color:#111;
+}
