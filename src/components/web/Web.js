@@ -43,19 +43,26 @@ export default {
     deletePost: function (item) {
       var db = this.$firebaseRefs['posts'];
       var $this = this;
+
+
       swal({
         title: "Are you sure?",
         text: "You will not be able to recover this post!",
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#DD6B55",
-        confirmButtonText: "Yes, delete it!",
-        closeOnConfirm: false
-      },
-      function(){
-        swal("Deleted!", "The post will be deleted", "success");
-        $this.removeItem(db, item[".key"]);
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("The post will be deleted", {
+            icon: "success",
+          });
+          $this.removeItem(db, item[".key"]);
+        } else {
+          swal("Your imaginary file is safe!");
+        }
       });
+
     },
     removeItem: function (db, key) {
       db.child(key).remove();
